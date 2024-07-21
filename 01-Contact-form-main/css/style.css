@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'karla';
+    src: url('/assets/fonts/Karla-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    /* Colors */
+    /* Primary */
+    --green-lighter: hsl(148, 38%, 91%);
+    --green-medium: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
+
+    /* Neutral */
+    --white: hsl(0, 0%, 100%);
+    --grey-medium: hsl(186, 15%, 59%);
+    --grey-darker: hsl(187, 24%, 22%);
+
+    /* Font */
+    --font: 'karla', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+body {
+    font-family: var(--font);
+    font-size: 1.6rem;
+    background-color: var(--green-lighter);
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--grey-darker);
+}
+.flex-inputs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0;
+    gap: 20px;
+}
+.flex-input-radio {
+    display: flex;
+}
+.flex-input-radio-1, .flex-input-radio-2 {
+    width: 50%;
+    border: 1px solid var(--grey-medium);
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.flex-input-radio-1 label, .flex-input-radio-2 label {
+    margin: 0;
+}
+.form-legend {
+    font-family: var(--font);
+    font-weight: 700;
+    color: var(--grey-darker);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.obligatory-input {
+    color: var(--green-medium);
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--grey-medium);
+    border-radius: 5px;
+    font-size: 1.6rem;
+    outline: 0;
+}
+.terms-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.terms-content label {
+    margin: 0;
+    font-size: 1.2rem;
+}
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    background-color: var(--green-medium);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: hsl(169, 96%, 20%);
+}
+.attribution {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+.message-alert {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
